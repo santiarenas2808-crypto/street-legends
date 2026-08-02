@@ -107,7 +107,7 @@ function createEnemy(){
 
         }
 
-        y+=6;
+        y += speed / 20;
 
         enemy.style.top=y+"px";
 
