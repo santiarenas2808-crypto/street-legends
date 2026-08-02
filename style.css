@@ -1,4 +1,4 @@
-*{
+yo*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -134,4 +134,7 @@ body{
     font-size:22px;
     border:none;
     border-radius:12px;
+}
+.enemy{
+    box-shadow:0 0 20px dodgerblue;
 }
