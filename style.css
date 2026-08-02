@@ -146,5 +146,29 @@ box-shadow:0 0 15px yellow;
     border-radius:12px;
 }
 .enemy{
-    box-shadow:0 0 20px dodgerblue;
+    background:linear-gradient(to bottom,#2196F3,#0D47A1)!important;
+    border-radius:15px;
+    box-shadow:0 0 20px #2196F3;
+}
+
+.enemy::before{
+    content:"";
+    position:absolute;
+    top:12px;
+    left:12px;
+    width:46px;
+    height:40px;
+    background:#222;
+    border-radius:10px;
+}
+
+.enemy::after{
+    content:"";
+    position:absolute;
+    bottom:8px;
+    left:15px;
+    width:40px;
+    height:8px;
+    background:#ff2b2b;
+    border-radius:8px;
 }
