@@ -35,6 +35,9 @@ function updateScore(){
 
     speedText.innerHTML="Velocidad: "+speed+" km/h";
 
+if(score % 100 == 0){
+    speed += 10;
+}
 }
 
 road.addEventListener("touchstart",movePlayer);
