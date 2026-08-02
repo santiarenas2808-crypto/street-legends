@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#111;
+    overflow:hidden;
+}
+
+#menu{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(#0a0a0a,#222);
+    color:white;
+    z-index:100;
+}
+
+#menu h1{
+    font-size:48px;
+    color:#00e5ff;
+    text-shadow:0 0 20px #00e5ff;
+    margin-bottom:15px;
+}
+
+#menu p{
+    color:#ccc;
+    margin-bottom:30px;
+}
+
+#playButton{
+    padding:18px 45px;
+    font-size:24px;
+    border:none;
+    border-radius:15px;
+    background:#00e5ff;
+    color:black;
+    font-weight:bold;
+}
+
+#hud{
+    position:absolute;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+    color:white;
+    font-size:20px;
+    z-index:50;
+}
+
+#game{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#1d1d1d;
+}
+
+#road{
+    position:relative;
+    width:360px;
+    max-width:95vw;
+    height:100vh;
+    background:#444;
+    overflow:hidden;
+    border-left:8px solid white;
+    border-right:8px solid white;
+}
+
+#road::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:10px;
+    height:200%;
+    background:repeating-linear-gradient(
+        white 0 40px,
+        transparent 40px 80px
+    );
+    animation:roadMove .35s linear infinite;
+}
+
+@keyframes roadMove{
+    from{
+        transform:translate(-50%,0);
+    }
+
+    to{
+        transform:translate(-50%,80px);
+    }
+}
+
+#player{
+    position:absolute;
+    width:70px;
+    height:120px;
+    background:red;
+    border-radius:15px;
+    bottom:40px;
+    left:145px;
+    box-shadow:0 0 20px red;
+}
+
+#gameOver{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:rgba(0,0,0,.9);
+    color:white;
+    z-index:300;
+}
+
+#gameOver h2{
+    font-size:60px;
+    margin-bottom:30px;
+}
+
+#gameOver button{
+    padding:20px 45px;
+    font-size:22px;
+    border:none;
+    border-radius:12px;
+}
